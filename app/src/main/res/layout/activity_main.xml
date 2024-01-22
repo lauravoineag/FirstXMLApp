@@ -7,17 +7,34 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/text_view_id"
+        android:id="@+id/text_pica"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello! pica"
+        android:ellipsize="end"
+        android:lines="2"
+        android:text="Hello! pica hope you are doing okay!Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay! Hello! pica hope you are doing okay!"
+        android:textAlignment="center"
+        android:textColor="@color/green"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/text_counting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Let's count together: 0"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/text_pica"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/text_pica" />
+
     <Button
-        android:id="@+id/mybutton"
+        android:id="@+id/my_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="161dp"
@@ -25,9 +42,22 @@
         android:layout_marginEnd="160dp"
         android:layout_marginBottom="247dp"
         android:text="Button"
+        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_view_id"/>
+        app:layout_constraintTop_toBottomOf="@+id/text_pica" />
+
+    <Button
+        android:id="@+id/button_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="+1"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/text_counting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
